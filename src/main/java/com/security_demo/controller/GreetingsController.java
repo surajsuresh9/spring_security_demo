@@ -38,13 +38,13 @@ public class GreetingsController {
     }
 
 
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasRole('user')")
     @GetMapping("/user")
     public String userEndpoint() {
         return "Hello, User!";
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('admin')")
     @GetMapping("/admin")
     public String adminEndpoint() {
         return "Hello, Admin!";
